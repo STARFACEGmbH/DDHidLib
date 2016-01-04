@@ -103,6 +103,11 @@
 		55FD66FD0B5DDD2100325FEF /* JoystickPaneController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55FD66FC0B5DDD2100325FEF /* JoystickPaneController.m */; };
 		55FD67750B5DDF8200325FEF /* ButtonState.m in Sources */ = {isa = PBXBuildFile; fileRef = 55FD67740B5DDF8200325FEF /* ButtonState.m */; };
 		55FD67CC0B5DE18600325FEF /* DDHidLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 55FD67CB0B5DE18600325FEF /* DDHidLib.h */; };
+		8BB39C121C3A75BD008D1B0D /* DDHidHeadset.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BB39C101C3A75BD008D1B0D /* DDHidHeadset.h */; };
+		8BB39C131C3A75BD008D1B0D /* DDHidHeadset.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BB39C101C3A75BD008D1B0D /* DDHidHeadset.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8BB39C161C3A75BD008D1B0D /* DDHidHeadset.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB39C111C3A75BD008D1B0D /* DDHidHeadset.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		8BB39C171C3A75BD008D1B0D /* DDHidHeadset.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB39C111C3A75BD008D1B0D /* DDHidHeadset.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		8BB39C1A1C3A772D008D1B0D /* HeadsetPaneController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB39C191C3A772D008D1B0D /* HeadsetPaneController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
@@ -247,6 +252,10 @@
 		55FD67730B5DDF8200325FEF /* ButtonState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonState.h; sourceTree = "<group>"; };
 		55FD67740B5DDF8200325FEF /* ButtonState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonState.m; sourceTree = "<group>"; };
 		55FD67CB0B5DE18600325FEF /* DDHidLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDHidLib.h; sourceTree = "<group>"; };
+		8BB39C101C3A75BD008D1B0D /* DDHidHeadset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDHidHeadset.h; sourceTree = "<group>"; };
+		8BB39C111C3A75BD008D1B0D /* DDHidHeadset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDHidHeadset.m; sourceTree = "<group>"; };
+		8BB39C181C3A772D008D1B0D /* HeadsetPaneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadsetPaneController.h; sourceTree = "<group>"; };
+		8BB39C191C3A772D008D1B0D /* HeadsetPaneController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeadsetPaneController.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* HIDBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HIDBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B366F1AE16F5DE9800C0BA49 /* DDHidAppleMikey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDHidAppleMikey.h; sourceTree = "<group>"; };
@@ -399,6 +408,8 @@
 				55170E0C0B8ECCAC00C82155 /* AppleRemotePaneController.m */,
 				55170E630B8ECEF600C82155 /* RemoteFeedbackView.h */,
 				55170E640B8ECEF600C82155 /* RemoteFeedbackView.m */,
+				8BB39C181C3A772D008D1B0D /* HeadsetPaneController.h */,
+				8BB39C191C3A772D008D1B0D /* HeadsetPaneController.m */,
 				55A000510B5D7C06001B47E5 /* BoolFormatter.h */,
 				55A000500B5D7C06001B47E5 /* BoolFormatter.m */,
 				55FD67730B5DDF8200325FEF /* ButtonState.h */,
@@ -436,6 +447,8 @@
 				55170D350B8EC2CE00C82155 /* DDHidAppleRemote.m */,
 				55FC9FD90BB76D8D0095FC7B /* DDHidKeyboardBarcodeScanner.h */,
 				55FC9FDA0BB76D8D0095FC7B /* DDHidKeyboardBarcodeScanner.m */,
+				8BB39C101C3A75BD008D1B0D /* DDHidHeadset.h */,
+				8BB39C111C3A75BD008D1B0D /* DDHidHeadset.m */,
 				55FD67CB0B5DE18600325FEF /* DDHidLib.h */,
 			);
 			path = lib;
@@ -511,6 +524,7 @@
 				55FC9FDD0BB76D8D0095FC7B /* DDHidKeyboardBarcodeScanner.h in Headers */,
 				55193E6C0B93F31D004C0C98 /* DDHidLib.h in Headers */,
 				55193F110B93F36F004C0C98 /* NSXReturnThrowError.h in Headers */,
+				8BB39C131C3A75BD008D1B0D /* DDHidHeadset.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -533,6 +547,7 @@
 				55CA60E50BA0F2530012CF7B /* DDHidKeyboard.h in Headers */,
 				55FC9FDB0BB76D8D0095FC7B /* DDHidKeyboardBarcodeScanner.h in Headers */,
 				B366F1B016F5DE9800C0BA49 /* DDHidAppleMikey.h in Headers */,
+				8BB39C121C3A75BD008D1B0D /* DDHidHeadset.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -685,6 +700,7 @@
 				55193E630B93F31D004C0C98 /* DDHidUsageTables.m in Sources */,
 				55193E650B93F31D004C0C98 /* NSDictionary+DDHidExtras.m in Sources */,
 				55193E670B93F31D004C0C98 /* DDHidMouse.m in Sources */,
+				8BB39C171C3A75BD008D1B0D /* DDHidHeadset.m in Sources */,
 				55193E690B93F31D004C0C98 /* DDHidJoystick.m in Sources */,
 				55193E6B0B93F31D004C0C98 /* DDHidAppleRemote.m in Sources */,
 				55193F120B93F371004C0C98 /* NSXReturnThrowError.m in Sources */,
@@ -700,6 +716,7 @@
 			files = (
 				559CBAEC0B5B31AB00C8FD74 /* main.m in Sources */,
 				559CBCA90B5B3BCE00C8FD74 /* MousePaneController.m in Sources */,
+				8BB39C1A1C3A772D008D1B0D /* HeadsetPaneController.m in Sources */,
 				55A000520B5D7C06001B47E5 /* BoolFormatter.m in Sources */,
 				55FD65CB0B5DD57200325FEF /* DeviceTestController.m in Sources */,
 				55FD66FD0B5DDD2100325FEF /* JoystickPaneController.m in Sources */,
@@ -723,6 +740,7 @@
 				559CBBDC0B5B337600C8FD74 /* DDHidUsageTables.m in Sources */,
 				559CBC260B5B349100C8FD74 /* NSDictionary+DDHidExtras.m in Sources */,
 				559CBC2D0B5B34C300C8FD74 /* DDHidMouse.m in Sources */,
+				8BB39C161C3A75BD008D1B0D /* DDHidHeadset.m in Sources */,
 				55FD66D60B5DDC3F00325FEF /* DDHidJoystick.m in Sources */,
 				55BE6DCE0B8033010085514D /* NSXReturnThrowError.m in Sources */,
 				55170D370B8EC2CE00C82155 /* DDHidAppleRemote.m in Sources */,

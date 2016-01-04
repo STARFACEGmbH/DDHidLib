@@ -1,6 +1,6 @@
 /*
- * Copyright (c) 2007 Dave Dribin
- * 
+ * Copyright (c) 2016 STARFACE GmbH
+ *
  * Permission is hereby granted, free of charge, to any person
  * obtaining a copy of this software and associated documentation
  * files (the "Software"), to deal in the Software without
@@ -8,7 +8,7 @@
  * modify, merge, publish, distribute, sublicense, and/or sell copies
  * of the Software, and to permit persons to whom the Software is
  * furnished to do so, subject to the following conditions:
- * 
+ *
  * The above copyright notice and this permission notice shall be
  * included in all copies or substantial portions of the Software.
  *
@@ -22,16 +22,24 @@
  * SOFTWARE.
  */
 
-#import "DDHidDevice.h"
-#import "DDHidElement.h"
-#import "DDHidUsage.h"
-#import "DDHidQueue.h"
-#import "DDHidEvent.h"
-#import "DDHidUsageTables.h"
-#import "DDHidMouse.h"
-#import "DDHidJoystick.h"
-#import "DDHidKeyboard.h"
-#import "DDHidAppleRemote.h"
-#import "DDHidAppleMikey.h"
-#import "DDHidKeyboardBarcodeScanner.h"
-#import "DDHidHeadset.h"
+#import <DDHidLib/DDHidLib.h>
+
+@protocol DDHidHeadsetDelegate;
+
+@interface DDHidHeadset : DDHidDevice
+
+@property (weak) id<DDHidHeadsetDelegate> delegate;
+
++ (NSArray *)allHeadsets;
+
+- (void)setValue:(int32_t)value forElement:(DDHidElement *)element;
+
+@end
+
+@protocol DDHidHeadsetDelegate <NSObject>
+
+- (void)ddhidHeadset:(DDHidHeadset *)headset
+               press:(unsigned)usageId
+            upOrDown:(BOOL)upOrDown;
+
+@end
