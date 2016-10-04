@@ -37,11 +37,17 @@
     NSMutableArray * elements = [NSMutableArray array];
     
     NSDictionary * properties;
-    NSEnumerator * e = [propertiesArray objectEnumerator];
-    while (properties = [e nextObject])
-    {
-        DDHidElement * element = [DDHidElement elementWithProperties: properties];
-        [elements addObject: element];
+    if ([elements isKindOfClass:[NSArray class]]) {
+        NSEnumerator * e = [propertiesArray objectEnumerator];
+        while (properties = [e nextObject])
+        {
+            if([properties isKindOfClass:[NSDictionary class]]) {
+                DDHidElement * element = [DDHidElement elementWithProperties: properties];
+                if (element != nil) {
+                    [elements addObject: element];
+                }
+            }
+        }
     }
     
     return elements;
